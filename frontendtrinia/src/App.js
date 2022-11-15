@@ -24,6 +24,7 @@ const App = () => {
       <div hidden={hidden}>
       <Form/>
       </div>
+      <br />
       <Footer />
     </div>
   );

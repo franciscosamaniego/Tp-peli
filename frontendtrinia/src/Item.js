@@ -51,11 +51,12 @@ function handleCalif(event){
 
     
     return (
-        <div className="form">
+        <div>
             <h3>{props.Name}</h3>
-                <p>Genero: {props.Gender}</p>
-                <p>Sinopsis: {props.Sinopsis}</p>
-                <p>Calificación: {CalifProm}</p>
+            <ul>
+                <li>Genero: {props.Gender}</li>
+                <li>Sinopsis: {props.Sinopsis}</li>
+                <li>Calificación: {CalifProm}</li>
                 <form onSubmit={handleCalif}>
                     <label>Ingrese su Calificacion : </label>
                     <input
@@ -73,6 +74,7 @@ function handleCalif(event){
                     />
                     <button type = "submit">Enviar</button>
                 </form>
+            </ul>
             
             <p>{props.admin_mode ? <button onClick={deleteItem}>Eliminar</button> : ''}</p>
         </div>

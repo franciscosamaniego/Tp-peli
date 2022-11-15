@@ -26,7 +26,9 @@ const [adminEnable, setadminEnable] = useState(false);
     
     return (
         <div>
-            <button className="btn btn-primary"onClick={event => setadminEnable(!adminEnable)}>Activar/Desactivar modo de administrador</button>
+            <div className="text-center">
+            <button className="btn btn-warning"onClick={event => setadminEnable(!adminEnable)}>Administrar</button>
+            </div>
             <br></br>
             <button className="btn btn-primary"onClick={event => setItemType("Pelicula")}>Peliculas</button>
             <button className="btn btn-danger right"onClick= { event => setItemType("Serie")}>Series</button>
@@ -35,4 +37,4 @@ const [adminEnable, setadminEnable] = useState(false);
     );
 }
 
-export default ItemSelector
+export default ItemSelector;

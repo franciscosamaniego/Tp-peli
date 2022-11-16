@@ -32,6 +32,8 @@ function Form() {
       window.location.reload();
     }
 
+    const [selectedImage, setSelectedImage] = useState(null);
+
   return (
     <form onSubmit={handleSubmit} className="centrar">
     <label>
@@ -121,20 +123,20 @@ function Form() {
     }}
     />
     <br></br>
-    <label>
-    Imagen
-    <input
-    value={form.Image}
-    onChange={e =>{
-      setForm({
-        ...form,
-        Image: e.target.value
-      })
-    }}
-    />
-    </label>
+    <div id="image">
+      {selectedImage && (
+        <div>
+        <img alt="not fount" width={"250px"} src={URL.createObjectURL(selectedImage)} />
+        <br />
+        <button onClick={()=>setSelectedImage(null)}>Remove</button>
+        </div>
+      )}
+      <br />
+     
+      <br /> 
+    </div>
     <br></br>
-  <input class="btn btn-success"
+  <input className="btn btn-success"
   type = "submit"
   onClick={reload}
   />

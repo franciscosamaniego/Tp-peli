@@ -18,8 +18,8 @@ const App = () => {
     <div>
       <Header title='Notas'/>
       <ItemSelector/>
-      <div class="text-center">
-      <button class="btn-warning" onClick={e => setHidden(prev => !prev)}>Crear peliculas</button>
+      <div className="text-center">
+      <button className="btn-warning" onClick={e => setHidden(prev => !prev)}>Crear peliculas</button>
       </div>
       <div hidden={hidden}>
       <Form/>

@@ -51,15 +51,16 @@ function handleCalif(event){
 
     
     return (
-        <div>
+        <div className="form">
+            <img className="img"src={props.Image}/>
             <h3>{props.Name}</h3>
-            <ul>
-                <li>Genero: {props.Gender}</li>
-                <li>Sinopsis: {props.Sinopsis}</li>
-                <li>Calificación: {CalifProm}</li>
+            
+                <p>Genero: {props.Gender}</p>
+                <p>Sinopsis: {props.Sinopsis}</p>
+                <p>Calificación: {CalifProm}</p>
                 <form onSubmit={handleCalif}>
                     <label>Ingrese su Calificacion : </label>
-                    <input
+                    <input className="input"
                     data-itemid = {props.item_id} 
                     type= "number"
                     min = "0"
@@ -72,11 +73,10 @@ function handleCalif(event){
                         })
                       }}
                     />
-                    <button type = "submit">Enviar</button>
+                    <button className="btn btn-success"type = "submit">Enviar</button>
                 </form>
-            </ul>
             
-            <p>{props.admin_mode ? <button onClick={deleteItem}>Eliminar</button> : ''}</p>
+            <p>{props.admin_mode ? <button className="btn btn-danger" onClick={deleteItem}>Eliminar</button> : ''}</p>
         </div>
     )
 } 
